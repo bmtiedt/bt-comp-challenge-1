@@ -246,10 +246,19 @@ body {
   .grid-item-main button {
     margin: 2rem 2rem;
   }
+
 }
 
 @media screen and (max-width: 540px) {
   .grid-container {
     display: flex;
     flex-direction: column;
+  }
+
+  .grid-item {
+    display: flex;
+    font-size: 1rem;
+    justify-content: center;
+    flex-direction: row;
+  }
 }
