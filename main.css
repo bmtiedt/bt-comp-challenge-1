@@ -50,6 +50,7 @@ body {
 .grid-item-main button {
   background-color: rgba(189 96 34);
   border: 0.15rem solid #060329;
+  cursor: not-allowed;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
   height: 2.35rem;
@@ -135,8 +136,17 @@ background-color: rgba(113 57 20);
 }
 
 .carosel-buttons {
-  position: absolute;
-  top: 50%; left:
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* position: absolute; */
+  /* top: 50%; left: */
+}
+
+.main-pic-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center
 }
 
 .menu-buttons {
@@ -147,11 +157,10 @@ background-color: rgba(113 57 20);
 .three-dot-menu {
   float: right;
   font-size: 2rem;
-  position: absolute;
+  display: flex;
   top: 2rem; right: 2rem;
+  margin: 2rem 2rem 0 0 ;
 }
-
-
 
 .arrow {
   font-size: 2.5rem;
@@ -161,8 +170,8 @@ background-color: rgba(113 57 20);
   margin: 0 1rem;
 }
 
-.right-arrow {
-  margin-left: 15rem;
+.left-arrow {
+  margin-left: 4rem;
 }
 
 @media screen and (max-width: 925px) {
@@ -190,7 +199,13 @@ background-color: rgba(113 57 20);
     justify-content: space-between;
   }
 
+  .grid-item-main h1 {
+    text-shadow: 0.01rem 0.01rem 0.01rem grey;
+  }
+
   .grid-item-main p {
+    font-size:  1rem;
+    text-shadow: 0.01rem 0.01rem 0.01rem grey;
     width: 9rem;
   }
 
@@ -209,13 +224,42 @@ background-color: rgba(113 57 20);
 
 }
 
-@media screen and (max-width: 700px) {
-  .full-wrapper {
-    display: inline-block;
+@media screen and (max-width: 680px) {
+  .grid-container {
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    "info info"
+    "profile experience"
+    "education blog"
+    "social contact"
+    "portfolio";
+    overflow: scroll;
   }
-
+ 
   #a1 {
     background-image: url(images/theWolf.jpg); 
   }
 
+  .grid-main-item {
+    color: rgb(136, 38, 21);
+  }
+
+  .grid-item-main h1 {
+    color: rgb(136, 38, 21);
+  }
+
+  .grid-item-main p  {
+    color: rgb(136, 38, 21);
+    font-size: 1rem;
+    margin: 0 2rem;
+  }
+
+  .grid-item-main button {
+    margin: 2rem 2rem;
+
+  }
+
+  .grid-item {
+    
+  }
 }
